@@ -12,14 +12,14 @@ void setup()
 
 void loop()
 {
-if(digitalRead(capteur_D) == LOW) 
+if(val_analogique > 1000) 
   {
-    Serial.println("Digital value : wet"); 
+    Serial.println("Digital value : dry"); 
     delay(10); 
   }
 else
   {
-    Serial.println("Digital value : dry");
+    Serial.println("Digital value : wet");
     delay(10); 
   }
 val_analogique=analogRead(capteur_A); 
